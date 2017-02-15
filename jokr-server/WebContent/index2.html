@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jokr</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="style.css" />
+
+<script type="text/javascript">
+	function getSrc() {
+		var urlParams = location.search.split(/[?&]/).slice(1).map(
+				function(paramPair) {
+					return paramPair.split(/=(.+)?/).slice(0, 2);
+				}).reduce(function(obj, pairArray) {
+			obj[pairArray[0]] = pairArray[1];
+			return obj;
+		}, {});
+
+		if (urlParams.j == null) {
+			// sample
+			return "http://d039d8b4-8aeb-4332-b140-0e80ef24ab33-bluemix.cloudant.com/jokr/2a14d959-543d-46e8-b70e-9ac70bbabf94/jokr.mp3";
+		} else {
+			return "http://d039d8b4-8aeb-4332-b140-0e80ef24ab33-bluemix.cloudant.com/jokr/"
+					+ urlParams.j + "/jokr.mp3";
+		}
+	}
+
+	function prepaire() {
+		document.getElementById('audio').src = getSrc();
+	}
+</script>
+
+</head>
+<body onLoad="prepaire()">
+	<img class="newappIcon" src="images/newapp-icon.png">
+	<h1>Welcome!</h1>
+	<p class="description">
+		We will be ready soon. <span id="span_1"> <img
+			src="images/bubble.png" name="Bottom-1" border="0" id="Bottom-1" />
+		</span>
+
+		<audio id="audio" controls src="" type="audio/mpeg">Your
+			browser does not support the audio element.
+		</audio>
+
+	</p>
+</body>
+</html>

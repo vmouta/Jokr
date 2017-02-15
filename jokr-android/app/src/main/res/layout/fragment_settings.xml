@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.jokrapp.android.SettingsFragment">
+
+    <TextView
+        android:id="@+id/text3"
+        android:textSize="18dp"
+        android:textColor="@color/colorText2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Please choose all your languages that you kind of grasp."
+        android:layout_marginTop="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="Swiss German"
+        android:id="@+id/sde"
+        android:layout_marginTop="41dp"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/text3"
+        android:layout_alignStart="@+id/text3"
+        android:layout_alignEnd="@+id/text3" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="German"
+        android:id="@+id/de"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/sde"
+        android:layout_alignStart="@+id/sde" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="English"
+        android:id="@+id/en"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/de"
+        android:layout_alignStart="@+id/de" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="French"
+        android:id="@+id/fr"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/en"
+        android:layout_alignStart="@+id/en" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="Italian"
+        android:id="@+id/it"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/fr"
+        android:layout_alignStart="@+id/en" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="Spanish"
+        android:id="@+id/es"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/it"
+        android:layout_alignStart="@+id/it" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText2"
+        android:text="Portuguese"
+        android:id="@+id/pt"
+        android:checked="false"
+        android:textSize="24dp"
+        android:layout_below="@+id/es"
+        android:layout_alignStart="@+id/es" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/sde"
+        android:layout_marginBottom="34dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/sde"
+        android:layout_alignTop="@+id/sde"
+        android:layout_toStartOf="@+id/sde"
+        android:layout_above="@+id/de" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@drawable/de"
+        android:layout_alignBottom="@+id/de"
+        android:layout_alignTop="@+id/de"
+        android:layout_alignStart="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:src="@drawable/en"
+        android:layout_alignTop="@+id/en"
+        android:layout_toStartOf="@+id/en"
+        android:layout_above="@+id/fr" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView6"
+        android:src="@drawable/fr"
+        android:layout_alignBottom="@+id/fr"
+        android:layout_below="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:src="@drawable/it"
+        android:layout_above="@+id/es"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:src="@drawable/es"
+        android:layout_alignTop="@+id/es"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_above="@+id/pt"
+        android:layout_toStartOf="@+id/es" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:src="@drawable/pt"
+        android:layout_alignTop="@+id/pt"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_alignBottom="@+id/pt"
+        android:layout_toStartOf="@+id/pt" />
+</RelativeLayout>

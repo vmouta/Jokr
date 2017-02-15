@@ -1,0 +1,28 @@
+
+source 'https://github.com/zucred/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.1'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'jokr' do
+  pod "zucredApple"
+  pod "Google/CloudMessaging"
+  pod "Google/Analytics"
+  pod "Google/AppInvite"
+  pod "Google/SignIn"
+  pod "Google/AdMob"
+  pod "GSMessages"
+  pod "ObjectMapper"
+  pod "AlamofireObjectMapper"
+end
+
+target 'jokrTests' do
+
+end
+
+target 'jokrUITests' do
+
+end

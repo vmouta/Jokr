@@ -1,0 +1,62 @@
+{
+  "images" : [
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-29.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-29x2-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-29x3.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-40x2-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-40x3.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-57.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-57x2.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-60x2.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "ic_launcher-60x3.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

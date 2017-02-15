@@ -1,0 +1,6 @@
+framework module zucredApple {
+  umbrella header "zucredApple-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,204 @@
+**API DOCUMENTATION**
+----
+
+http://jokr.eu-gb.mybluemix.net
+
+*********USER*********
+---- Create user
+
+POST /api/user
+
+**Body Params**
+
+deviceId
+deviceOS ["a", "i"]
+
+Example: {"deviceId":"123456789","deviceOS":"i"}
+
+**Success Response:**
+
+Response:
+
+{
+    "_id" = 7ecdfb9e65e14bb1b30c7a4231836fbe;
+    admin = 0;
+    creationTimestamp = 1451325555645;
+    deviceId = 123456789;
+    deviceOS = i;
+    lastActiveTimestamp = 1451325555645;
+    listeningTimestamp = 0;
+    objectClass = user;
+    yearOfBirth = 0;
+}
+
+---- Get All User Jokes
+
+GET /api/joke/getAllJokesOfUser
+
+**URL Params**
+
+userId
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926
+
+---- Block an user
+
+POST /api/user/blockUser
+
+**URL Params**
+
+userId
+userToBlockId
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926&userToBlockId=XXXXXXXXXX
+
+---- Add Favorite Joke
+
+POST /api/user/addFavorite
+
+**URL Params**
+
+userId
+jokeId
+
+---- Remove Favorite Joke
+
+POST /api/user/removeFavorite
+
+**URL Params**
+
+userId
+jokeId
+
+---- Get all user Favorite Joke
+
+GET /api/user/getAllFavoritesOfUser
+
+**URL Params**
+
+userId
+
+---- Upload Profile Picture
+
+POST /api/joke/addUserImage
+
+** Body Param**
+
+userId
+
+---- Fetch Profile Picture
+
+GET /fetchUserPic
+
+**URL Params**
+
+userId
+
+*********Fetch*********
+----
+
+GET /api/fetch
+
+**URL Params**
+
+userId
+demo [true, false]
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926&demo=true
+
+**Success Response:**
+
+Response:
+
+{
+    "_id": "252b6fa1-6039-489f-bafb-98cbee6c3f79",
+    "language": "sde",
+    "public": false,
+    "title": "whistle",
+    "tags": "whistleiscool",
+    "likes": 7,
+    "_rev": "18-604df97384c263296974a87c672da036",
+    "framingBegin": 0,
+    "framingEnd": 0,
+    "creationTimestamp": 1449422220095,
+    "uploadTimestamp": 1449422245883,
+    "objectClass": "joke",
+    "userName": "Pat",
+    "userId": "65ecf2290c7f44918b402961799e976d",
+    "uploaded": true,
+    "_attachments": {
+        "jokr_plain.mp3": {
+            "contentType": "audio/mp3",
+            "revpos": 2,
+            "digest": "md5-ReazSgzmbkEhNg2aGEvwhw==",
+            "length": 16927,
+            "stub": true
+        },
+        "jokr.mp3": {
+            "contentType": "audio/mp3",
+            "revpos": 3,
+            "digest": "md5-wc8NXRFz0y93HNEFzU0cGA==",
+            "length": 101772,
+            "stub": true
+        }
+    }
+}
+
+----
+
+GET /fetch/recommended
+
+**URL Params**
+
+userId
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926
+
+*********Joke*********
+---- Upload joke
+
+POST /receiver
+
+multipart/form-data
+
+**Body Params**
+
+_id
+userId
+title
+language
+tags
+framingBegin
+framingEnd
+creationTimestamp
+
+---- Update joke
+
+POST /api/joke/update
+
+**Body Params**
+
+Joke json representation
+
+---- Like Joke
+
+POST /api/joke/like
+
+**URL Params**
+
+userId
+jokeId
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926&jokeId=xxxxx
+
+---- Dislike Joke*
+
+POST api/joke/dislike
+
+**URL Params**
+
+userId
+jokeId
+
+example: ?userId=f432fe6e99df4b7fb5e570930181e926&jokeId=xxxxx
+

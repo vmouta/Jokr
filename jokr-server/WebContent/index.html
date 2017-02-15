@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jokr.lol</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="style.css" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<script type="text/javascript">
+	function getSrc() {
+		var urlParams = location.search.split(/[?&]/).slice(1).map(
+				function(paramPair) {
+					return paramPair.split(/=(.+)?/).slice(0, 2);
+				}).reduce(function(obj, pairArray) {
+			obj[pairArray[0]] = pairArray[1];
+			return obj;
+		}, {});
+
+		if (urlParams.j == null) {
+			// sample
+		// return "http://jokr.eu-gb.mybluemix.net/fetchJoke?jokeId=44c0eb31-fd6b-4116-8e79-bad53288bc67";
+			return "";
+		} else {
+			var j = urlParams.j.substring(0, 8) + "-"
+					+ urlParams.j.substring(8, 12) + "-"
+					+ urlParams.j.substring(12, 16) + "-"
+					+ urlParams.j.substring(16, 20) + "-"
+					+ urlParams.j.substring(20, 32);
+			return "http://jokr.eu-gb.mybluemix.net/fetchJoke?jokeId=" + j ;
+		}
+	}
+
+	function prepaire() {
+		document.getElementById('audio').src = getSrc();
+	}
+</script>
+
+</head>
+<body onLoad="prepaire()">
+	
+	<p class="description"><br />
+	
+	<img  src="images/logo.png" width="220"><br/>
+		<audio id="audio" controls src="" type="audio/mpeg">Your
+			browser does not support the audio element.
+		</audio><br/>
+		
+	<img width="150px"  src="images/google.png" onclick="window.open('http://play.google.com/store/apps/details?id=com.jokrapp')"/>
+	
+	</p>
+</body>
+</html>

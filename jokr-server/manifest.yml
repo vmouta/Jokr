@@ -1,0 +1,11 @@
+applications:
+- path: JavaCloudantApp.war
+  memory: 512M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: pattad03
+  host: pattad03
+  disk_quota: 2048M
+  services:
+  - pattad01-MonitoringAndAnalytics
+  - pattad03-cloudantNoSQLDB

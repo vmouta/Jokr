@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.jokrapp.android.ProfileFragment">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/userPic"
+        android:layout_below="@+id/chooseImageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/CropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        custom:scaleType="fitCenter"
+        custom:fixAspectRatio="true"
+        custom:cropShape="oval"
+        android:layout_below="@+id/chooseImageButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:textSize="18dp"
+        android:textColor="@color/colorText2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Your Joker name (Anything you like...)"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textJokeTitle"
+        android:layout_marginTop="60dp" />
+
+    <EditText
+        android:id="@+id/textJokeTitle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_below="@+id/text3"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/chooseImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera"
+        android:background="@android:color/transparent"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@+id/textJokeTitle"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/uploadButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/upload"
+        android:layout_above="@+id/userPic"
+        android:layout_toEndOf="@+id/chooseImageButton" />
+
+</RelativeLayout>

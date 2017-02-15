@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recordLayout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.jokrapp.android.MainFragment"
+    android:keepScreenOn="true"
+    android:animateLayoutChanges="true">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playJoke"
+        android:width="50dp"
+        android:height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/getajoke"
+        android:background="@android:color/transparent"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get a joke..."
+        android:id="@+id/bubbleText"
+        android:textSize="18dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+       />
+
+
+    <ImageButton
+        android:id="@+id/recordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="50dp"
+        android:height="100dp"
+        android:text="rec"
+        android:src="@drawable/record"
+        android:background="@android:color/transparent"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/playJoke"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record a Joke \nyourself"
+        android:textColor="@color/colorTitle"
+        android:id="@+id/textView5"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_below="@+id/recordButton"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

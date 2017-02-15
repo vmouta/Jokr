@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="AppLogin" parentEntity="AppModelID" syncable="YES">
+        <attribute name="passToken" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="AppModel" syncable="YES">
+        <attribute name="creationTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="modifyTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AppModelID" parentEntity="AppModel" syncable="YES">
+        <attribute name="modelID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="AppUser" parentEntity="AppModelID" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="permissions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AppUserPermission" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AppUserRole" syncable="YES"/>
+    </entity>
+    <entity name="AppUserPermission" parentEntity="AppModelID" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AppUserRole" parentEntity="AppModelID" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Joke" parentEntity="AppModelID" syncable="YES">
+        <attribute name="framingBegin" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="framingEnd" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likes" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Login" parentEntity="AppLogin" syncable="YES">
+        <relationship name="blockedUsers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="favoriteJokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Joke" syncable="YES"/>
+        <relationship name="followingUsers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="myJokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Joke" syncable="YES"/>
+    </entity>
+    <entity name="User" parentEntity="AppUser" syncable="YES">
+        <attribute name="deviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceOS" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jokesCnt" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="languages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="listeningTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfFollowers" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="serverID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppLogin" positionX="-515" positionY="233" width="128" height="73"/>
+        <element name="AppModel" positionX="-1341" positionY="36" width="128" height="90"/>
+        <element name="AppModelID" positionX="-1053" positionY="27" width="128" height="58"/>
+        <element name="AppUser" positionX="-522" positionY="-0" width="128" height="180"/>
+        <element name="AppUserPermission" positionX="-479" positionY="-364" width="128" height="58"/>
+        <element name="AppUserRole" positionX="-569" positionY="-126" width="128" height="58"/>
+        <element name="Joke" positionX="-1053" positionY="365" width="128" height="180"/>
+        <element name="Login" positionX="-513" positionY="342" width="128" height="103"/>
+        <element name="User" positionX="-254" positionY="-0" width="128" height="150"/>
+    </elements>
+</model>

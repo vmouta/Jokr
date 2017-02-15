@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <!-- icon -->
+    <ImageButton
+        android:id="@+id/button_playJoke"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:src="@drawable/playback" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This jokes is about mars"
+            android:textColor="@color/colorTextList"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#oneliner #business"
+            android:textColor="@color/colorTextList" />
+
+        <TextView
+            android:id="@+id/item_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17 likes"
+            android:textColor="@color/colorTextList" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/button_list_menu"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/menu" />
+
+
+</RelativeLayout>

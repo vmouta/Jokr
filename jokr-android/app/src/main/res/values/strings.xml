@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">JokerApp</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Home</item>
+        <item>My Jokes</item>
+        <item>Favorites</item>
+        <item>Following</item>
+        <item>Profile</item>
+        <item>Settings</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string-array name="languages">
+        <item>Swiss German</item>
+        <item>German</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Italien</item>
+        <item>Spanish</item>
+        <item>Portuguese</item>
+    </string-array>
+
+    <string-array name="endings">
+        <item>None</item>
+        <item>Hahaha</item>
+    </string-array>
+
+    <string-array name="begins">
+        <item>None</item>
+        <item>Applause</item>
+    </string-array>
+</resources>
