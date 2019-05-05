@@ -269,35 +269,35 @@ extension HomeViewController {
         //delegate?.collapseSidePanels?()
         switch(identifier) {
             case "Settings":
-                self.performSegueWithIdentifier("SETTINGS", sender: self)
+                self.performSegueWithIdentifier(withIdentifier: "SETTINGS", sender: self)
             case "MyJokes":
                 if let myJokes = JokrAppDelegate.sharedInstance.login?.userJokes, myJokes.count > 0 {
-                    self.performSegueWithIdentifier("MYJOKES", sender: self)
+                    self.performSegueWithIdentifier(withIdentifier: "MYJOKES", sender: self)
                 } else {
                     leftViewController?.view.showMessage("You have no Jokes", type: .Warning, options: [.TextPadding(5), .Height(64),.TextAlignment(.Left)])
                 }
             case "Favorite":
                 if let favoriteJokes = JokrAppDelegate.sharedInstance.login?.favoriteJokes, favoriteJokes.count > 0 {
-                    self.performSegueWithIdentifier("FAVORITES", sender: self)
+                    self.performSegueWithIdentifier(withIdentifier: "FAVORITES", sender: self)
                 } else {
                     leftViewController?.view.showMessage("You have no favorites", type: .Warning, options: [.TextPadding(5), .Height(64),.TextAlignment(.Left)])
                 }
             case "Recommended":
                 if let recommendedJokes = JokrAppDelegate.sharedInstance.login?.recommendedJokes, recommendedJokes.count > 0 {
-                    self.performSegueWithIdentifier("RECOMMENDED", sender: self)
+                    self.performSegueWithIdentifier(withIdentifier: "RECOMMENDED", sender: self)
                 } else {
                     leftViewController?.view.showMessage("You have no recomendations", type: .Warning, options: [.TextPadding(5), .Height(64),.TextAlignment(.Left)])
                 }
                 break
             case "Following":
                 if let followingUsers = JokrAppDelegate.sharedInstance.login?.followingUsers, followingUsers.count > 0 {
-                    self.performSegueWithIdentifier("FOLLOWING", sender: self)
+                    self.performSegueWithIdentifier(withIdentifier: "FOLLOWING", sender: self)
                 } else {
                     leftViewController?.view.showMessage("You are not following any user", type: .Warning, options: [.TextPadding(5), .Height(64),.TextAlignment(.Left)])
                 }
             case "Blocked":
                 if let blockedUsers = JokrAppDelegate.sharedInstance.login?.blockedUsers, blockedUsers.count > 0 {
-                    self.performSegueWithIdentifier("BLOCKED", sender: self)
+                    self.performSegueWithIdentifier(withIdentifier: "BLOCKED", sender: self)
                 } else {
                     leftViewController?.view.showMessage("You didn't block any user", type: .Warning, options: [.TextPadding(5), .Height(64), .TextAlignment(.Left)])
                 }
